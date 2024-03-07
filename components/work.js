@@ -1,9 +1,9 @@
 const Work = () => {
   return (
-    <div className="h-[40rem] bg-[url('/bg1.jpg')] bg-cover bg-center md:h-dvh">
+    <div className="h-auto bg-[url('/bg1.jpg')] bg-cover bg-center md:h-dvh">
       <div className="flex h-full w-full flex-col items-center justify-center backdrop-blur-sm">
         <p className="mb-5 text-center">工作經歷</p>
-        <div className="w-1/2 rounded-3xl bg-white p-12 shadow-2xl">
+        <div className="w-[90%] rounded-3xl bg-white p-12 shadow-2xl md:w-1/2">
           <p>
             前端工程師 & 軟體工程師 榮興自動化科技股份有限公司
             軟體工程師台南市歸仁區 2023/5~仍在職 1.派車系統前端 React：

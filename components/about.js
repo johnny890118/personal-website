@@ -1,9 +1,9 @@
 const About = () => {
   return (
-    <div className="h-[40rem] bg-[url('/bg2.jpg')] bg-cover bg-center md:h-dvh">
+    <div className="h-auto bg-[url('/bg2.jpg')] bg-cover bg-center md:h-dvh">
       <div className="flex h-full w-full flex-col items-center justify-center backdrop-blur-sm">
         <p className="mb-5 text-center">關於我</p>
-        <div className="w-1/2 rounded-3xl bg-white p-12 shadow-2xl">
+        <div className="w-[90%] rounded-3xl bg-white p-12 shadow-2xl md:w-1/2">
           <p>哈囉您好，我是政軒，對前端開發充滿熱情的人。</p>
           <p>個性活潑開朗，喜歡帶給身邊的人歡樂，善於溝通及團隊合作。</p>
           <p>1.畢業於義守大學通訊工程系（現已改名智慧網路工程系）</p>
