@@ -10,7 +10,7 @@ const Title = () => {
   ]);
 
   return (
-    <div className="h-dvh bg-[url('/bg1.jpg')] bg-cover bg-center">
+    <div className="h-dvh">
       <div className="flex h-full w-full flex-col items-center justify-center backdrop-blur-sm md:flex-row">
         <div className="flex h-full w-full flex-col justify-center px-5 md:w-1/2 md:items-end">
           <div className="w-[360px] md:mr-10">
@@ -22,9 +22,6 @@ const Title = () => {
               {"我是 "}
               <span className="typewriter thick text-xl font-bold text-violet-600 md:text-5xl"></span>
             </p>
-            {/* <p className="mt-5 text-xl font-bold md:text-5xl">
-              前端 & 軟體工程師
-            </p> */}
             <div className="mt-5 flex space-x-5 md:mt-10">
               {contact.map((item, index) => (
                 <button key={index}>

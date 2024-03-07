@@ -1,6 +1,6 @@
 const Work = () => {
   return (
-    <div className="h-auto bg-[url('/bg1.jpg')] bg-cover bg-center md:h-dvh">
+    <div className="h-auto md:h-dvh">
       <div className="flex h-full w-full flex-col items-center justify-center backdrop-blur-sm">
         <p className="mb-5 text-center">工作經歷</p>
         <div className="w-[90%] rounded-3xl bg-white p-12 shadow-2xl md:w-1/2">
