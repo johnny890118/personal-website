@@ -13,22 +13,18 @@ const Title = () => {
     <div className="h-dvh bg-[url('/bg1.jpg')] bg-cover bg-center">
       <div className="flex h-full w-full flex-col items-center justify-center backdrop-blur-sm md:flex-row">
         <div className="flex h-full w-full flex-col justify-center px-5 md:w-1/2 md:items-end">
-          <div className="md:mr-10">
-            {/* <h1 aria-label="Hi! I'm a developer">
-              {"Hi! I'm a "}
-              <span className="typewriter nocaret"></span>
-            </h1> */}
+          <div className="w-[360px] md:mr-10">
             <p className="my-5 w-48 border-x-4 border-pink-500 text-center text-xs font-bold md:w-60 md:text-base">
               WELCOME TO MY WORLD
             </p>
             <p className="mb-5 text-xl font-bold md:text-5xl">哈囉！</p>
-            <span className="text-xl font-bold md:text-5xl">我是 </span>
-            <span className="text-xl font-bold text-violet-600 md:text-5xl">
-              政軒
-            </span>
-            <p className="mt-5 text-xl font-bold md:text-5xl">
-              前端 & 軟體工程師
+            <p className="text-xl font-bold md:text-5xl">
+              {"我是 "}
+              <span className="typewriter thick text-xl font-bold text-violet-600 md:text-5xl"></span>
             </p>
+            {/* <p className="mt-5 text-xl font-bold md:text-5xl">
+              前端 & 軟體工程師
+            </p> */}
             <div className="mt-5 flex space-x-5 md:mt-10">
               {contact.map((item, index) => (
                 <button key={index}>
