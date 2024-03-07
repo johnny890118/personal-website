@@ -1,8 +1,8 @@
 const Work = () => {
   return (
-    <div className="h-auto pt-28 text-black">
+    <div className="h-auto pt-28 font-bold text-black">
       <div className="flex h-full w-full flex-col items-center justify-center">
-        <p className="mb-5 border-b-4 border-cyan-400 text-center text-2xl font-bold">
+        <p className="mb-5 border-b-4 border-cyan-400 text-center text-2xl">
           工作經歷
         </p>
         <div className="w-[90%] rounded-3xl p-12 shadow-2xl backdrop-blur-3xl md:w-1/2">
