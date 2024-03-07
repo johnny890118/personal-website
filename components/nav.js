@@ -61,7 +61,7 @@ const Nav = () => {
               : "pointer-events-none invisible absolute inset-x-0 top-0 origin-top-right scale-95 transform p-2 opacity-0 transition md:hidden"
           }
         >
-          <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+          <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-2xl ring-1 ring-black ring-opacity-5">
             <div className="px-5 pb-6 pt-5">
               <div className="flex items-center justify-between">
                 <Image alt="" width={100} height={100} src={"/logo.png"} />
