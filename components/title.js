@@ -11,7 +11,7 @@ const Title = () => {
 
   return (
     <div className="flex h-dvh items-center justify-center">
-      <div className="flex h-[80%] w-[90%] flex-col items-center justify-center rounded-3xl shadow-2xl backdrop-blur-3xl md:h-[80%] md:w-[90%] md:flex-row xl:w-[70%]">
+      <div className="flex h-[80%] w-[90%] flex-col items-center justify-center rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 backdrop-blur-md backdrop-filter md:h-[80%] md:w-[90%] md:flex-row xl:w-[70%]">
         <div className="flex h-full w-full flex-col items-start justify-center pl-4 md:w-1/2 md:pl-24">
           <div>
             <p className="my-5 w-48 border-x-4 border-pink-500 text-center text-xs font-bold text-black md:w-60 md:text-base">

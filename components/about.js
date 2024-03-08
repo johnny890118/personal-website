@@ -7,7 +7,7 @@ const About = () => {
         <p className="mb-5 border-b-4 border-cyan-400 text-center text-2xl">
           關於我
         </p>
-        <div className="flex w-[90%] flex-col rounded-3xl p-12 shadow-2xl backdrop-blur-3xl md:w-[70%] md:flex-row">
+        <div className="flex w-[90%] flex-col rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 p-12 backdrop-blur-md backdrop-filter md:w-[70%] md:flex-row">
           <div className="flex items-center justify-center pb-12 md:items-start md:pb-0 md:pr-12">
             <Image
               alt=""

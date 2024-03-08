@@ -6,7 +6,7 @@ const PortfolioShow = ({ portfolioName, portfolioURL, portfolioImg }) => {
     <Link
       target="_blank"
       href={`${portfolioURL}`}
-      className="mb-5 flex w-[90%] flex-col rounded-3xl p-12 shadow-2xl backdrop-blur-3xl md:w-[80%] md:flex-row"
+      className="mb-5 flex w-[90%] flex-col rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 p-12 backdrop-blur-md backdrop-filter md:w-[80%] md:flex-row"
     >
       <div>
         <Image alt="" src={portfolioImg} width={400} height={400} />
