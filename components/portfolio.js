@@ -1,17 +1,27 @@
-import React from "react";
+import PortfolioShow from "./portfolioShow";
 
 const Portfolio = () => {
   return (
-    <div className="h-[40rem] pt-28 font-bold text-black md:h-dvh">
+    <div className="h-auto pt-28 font-bold text-black">
       <div className="flex h-full w-full flex-col items-center justify-center">
         <p className="mb-5 border-b-4 border-cyan-400 text-center text-2xl">
           作品集
         </p>
-        <div className="w-[90%] rounded-3xl p-12 shadow-2xl backdrop-blur-3xl md:w-1/2">
-          <p>智慧倉儲派車系統</p>
-          <p>MuPho</p>
-          <p>UI組件</p>
-        </div>
+        <PortfolioShow
+          portfolioName={"智慧倉儲派車系統"}
+          portfolioURL={"https://wcs-demo.vercel.app/"}
+          portfolioImg={"/wcs.png"}
+        />
+        <PortfolioShow
+          portfolioName={"MuPho"}
+          portfolioURL={"https://mu-pho.vercel.app/"}
+          portfolioImg={"/mupho.png"}
+        />
+        <PortfolioShow
+          portfolioName={"UI組件"}
+          portfolioURL={"/"}
+          portfolioImg={"/alert.png"}
+        />
       </div>
     </div>
   );

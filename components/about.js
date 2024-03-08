@@ -5,7 +5,7 @@ const About = () => {
         <p className="mb-5 border-b-4 border-cyan-400 text-center text-2xl">
           關於我
         </p>
-        <div className="w-[90%] rounded-3xl p-12 shadow-2xl backdrop-blur-3xl md:w-1/2">
+        <div className="w-[90%] rounded-3xl p-12 shadow-2xl backdrop-blur-3xl md:w-[70%]">
           <p>哈囉您好，我是蔡政軒，對前端開發充滿熱情的人。</p>
           <br />
           <p>個性活潑開朗，喜歡帶給身邊的人歡樂，善於溝通及團隊合作。</p>

@@ -5,7 +5,7 @@ const Work = () => {
         <p className="mb-5 border-b-4 border-cyan-400 text-center text-2xl">
           工作經歷
         </p>
-        <div className="w-[90%] rounded-3xl p-12 shadow-2xl backdrop-blur-3xl md:w-1/2">
+        <div className="w-[90%] rounded-3xl p-12 shadow-2xl backdrop-blur-3xl md:w-[70%]">
           <p>榮興自動化科技股份有限公司</p>
           <p>台南市歸仁區 2023/5~仍在職</p>
           <br />
