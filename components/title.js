@@ -42,7 +42,7 @@ const Title = () => {
         <div className="flex h-full w-full items-start justify-center md:w-1/2 md:items-center md:justify-end">
           <Image
             alt=""
-            src={"/me.jpg"}
+            src={"/me2.jpg"}
             width={400}
             height={400}
             className="w-56 rounded-[40px] shadow-xl lg:mr-24 xl:w-80"
