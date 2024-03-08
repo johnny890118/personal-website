@@ -10,10 +10,10 @@ const Title = () => {
   ]);
 
   return (
-    <div className="h-dvh">
-      <div className="flex h-full w-full flex-col items-center justify-center backdrop-blur-sm md:flex-row">
-        <div className="flex h-full w-full flex-col justify-center px-5 md:w-1/2 md:items-end">
-          <div className="w-[360px] md:mr-10">
+    <div className="flex h-dvh items-center justify-center">
+      <div className="flex h-[80%] w-[70%] flex-col items-center justify-center rounded-3xl shadow-2xl backdrop-blur-3xl md:h-[80%] md:flex-row">
+        <div className="flex h-full w-full flex-col items-start justify-center pl-4 md:w-1/2 md:pl-24">
+          <div>
             <p className="my-5 w-48 border-x-4 border-pink-500 text-center text-xs font-bold text-black md:w-60 md:text-base">
               WELCOME TO MY WORLD
             </p>
@@ -39,13 +39,13 @@ const Title = () => {
             </div>
           </div>
         </div>
-        <div className="flex h-full w-full items-start justify-center md:w-1/2 md:items-center md:justify-start">
+        <div className="flex h-full w-full items-start justify-center md:w-1/2 md:items-center md:justify-end">
           <Image
             alt=""
             src={"/me.jpg"}
             width={400}
             height={400}
-            className="w-56 rounded-[40px] shadow-xl md:w-80 lg:ml-20"
+            className="w-56 rounded-[40px] shadow-xl md:w-80 lg:mr-24"
           />
         </div>
       </div>
