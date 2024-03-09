@@ -39,14 +39,14 @@ const Portfolio = () => {
           <UiComponentsShow
             portfolioName={"Toast"}
             portfolioURL={
-              "https://johnny890118.github.io/toast-ui.github.io//toast-ui/index.html"
+              "https://johnny890118.github.io/toast-ui.github.io/toast-ui/index.html"
             }
             portfolioImg={"/toast.png"}
           />
           <UiComponentsShow
             portfolioName={"QA"}
             portfolioURL={
-              "https://johnny890118.github.io/collapse-ui.github.io//QA/index.html"
+              "https://johnny890118.github.io/collapse-ui.github.io/QA/index.html"
             }
             portfolioImg={"/QA.png"}
           />
