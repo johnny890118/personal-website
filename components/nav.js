@@ -1,24 +1,36 @@
 import React, { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
   const [navItems] = useState([
-    { name: "Home" },
-    { name: "關於我" },
-    { name: "工作經歷" },
-    { name: "技能" },
-    { name: "作品集" },
+    { name: "Home", href: "#home", id: "home" },
+    { name: "關於我", href: "#about", id: "about" },
+    { name: "工作經歷", href: "#work", id: "work" },
+    { name: "技能", href: "#skills", id: "skills" },
+    { name: "作品集", href: "#portfolio", id: "portfolio" },
   ]);
+
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
       <div className="fixed z-50 w-screen px-5 backdrop-blur-sm md:px-0">
         <div className="flex h-[8vh] items-center justify-between md:justify-around">
-          <Link href="/">
+          <a
+            href="#home"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollTo("home");
+            }}
+          >
             <Image alt="" width={100} height={100} src={"/logo.png"} />
-          </Link>
+          </a>
           <div className="-my-2 -mr-2 md:hidden">
             <button
               type="button"
@@ -45,12 +57,17 @@ const Nav = () => {
           </div>
           <nav className="hidden space-x-10 md:flex">
             {navItems.map((item, index) => (
-              <button
+              <a
                 key={index}
+                href={item.href}
                 className="text-base font-bold text-black hover:text-gray-600"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollTo(item.id);
+                }}
               >
                 {item.name}
-              </button>
+              </a>
             ))}
           </nav>
         </div>
@@ -93,14 +110,19 @@ const Nav = () => {
               <div className="mt-6">
                 <nav className="grid gap-y-8">
                   {navItems.map((item, index) => (
-                    <button
+                    <a
                       key={index}
+                      href={item.href}
                       className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollTo(item.id);
+                      }}
                     >
                       <span className="ml-3 text-base font-medium text-gray-900">
                         {item.name}
                       </span>
-                    </button>
+                    </a>
                   ))}
                 </nav>
               </div>

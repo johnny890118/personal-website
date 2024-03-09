@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="h-auto pt-28 font-bold text-black">
+    <div className="h-auto pt-28 font-bold text-black" id="about">
       <div className="flex h-full w-full flex-col items-center justify-center">
         <p className="mb-5 border-b-4 border-cyan-400 text-center text-2xl">
           關於我
