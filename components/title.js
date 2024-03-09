@@ -46,6 +46,7 @@ const Title = () => {
             width={400}
             height={400}
             className="w-56 rounded-[40px] shadow-xl xl:w-80"
+            priority={true}
           />
         </div>
       </div>
