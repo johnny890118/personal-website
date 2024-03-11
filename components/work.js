@@ -1,17 +1,45 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Work = () => {
   return (
     <div className="h-auto pt-28 font-bold text-black" id="work">
       <div className="flex h-full w-full flex-col items-center justify-center">
-        <p className="mb-5 border-b-4 border-cyan-400 text-center text-2xl">
+        <motion.p
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            type: "tween",
+            duration: 1,
+            ease: "easeInOut",
+          }}
+          className="mb-5 border-b-4 border-cyan-400 text-center text-2xl"
+        >
           工作經歷
-        </p>
+        </motion.p>
         <div className="flex w-[90%] flex-col rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 p-12 pt-0 backdrop-blur-md backdrop-filter md:w-[70%] md:flex-row md:p-12">
-          <div className="flex items-center justify-center md:items-start md:pb-0 md:pr-12">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              type: "tween",
+              duration: 1,
+              ease: "easeInOut",
+            }}
+            className="flex items-center justify-center md:items-start md:pb-0 md:pr-12"
+          >
             <Image alt="" src={"/work.png"} width={470} height={470} />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              type: "tween",
+              duration: 1,
+              ease: "easeInOut",
+              delay: 0.5,
+            }}
+          >
             <p>榮興自動化科技股份有限公司</p>
             <p>台南市歸仁區 2023/5~仍在職</p>
             <br />
@@ -89,7 +117,7 @@ const Work = () => {
                 </ul>
               </li>
             </ol>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

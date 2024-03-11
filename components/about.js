@@ -1,14 +1,33 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <div className="h-auto pt-28 font-bold text-black" id="about">
       <div className="flex h-full w-full flex-col items-center justify-center">
-        <p className="mb-5 border-b-4 border-cyan-400 text-center text-2xl">
+        <motion.p
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            type: "tween",
+            duration: 1,
+            ease: "easeInOut",
+          }}
+          className="mb-5 border-b-4 border-cyan-400 text-center text-2xl"
+        >
           關於我
-        </p>
+        </motion.p>
         <div className="flex w-[90%] flex-col rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 p-12 backdrop-blur-md backdrop-filter md:w-[70%] md:flex-row">
-          <div className="flex items-center justify-center pb-12 md:items-start md:pb-0 md:pr-12">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              type: "tween",
+              duration: 1,
+              ease: "easeInOut",
+            }}
+            className="flex items-center justify-center pb-12 md:items-start md:pb-0 md:pr-12"
+          >
             <Image
               alt=""
               src={"/me2.jpg"}
@@ -16,8 +35,17 @@ const About = () => {
               height={700}
               className="rounded-full"
             />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              type: "tween",
+              duration: 1,
+              ease: "easeInOut",
+              delay: 0.5,
+            }}
+          >
             <p>哈囉您好，我是蔡政軒，對前端開發充滿熱情的人。</p>
             <br />
             <p>個性活潑開朗，喜歡帶給身邊的人歡樂，善於溝通及團隊合作。</p>
@@ -47,7 +75,7 @@ const About = () => {
             <p>
               我的未來展望是成為一名全端工程師，擁有跨足前後端的技能，能夠更好地應對不斷變化的技術環境。
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
