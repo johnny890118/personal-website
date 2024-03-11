@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import Image from "next/image";
+import React, { useState, useEffect } from "react";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
@@ -17,6 +17,16 @@ const Nav = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const [play, setPlay] = useState(false);
+
+  useEffect(() => {
+    const audio = document.getElementById("background-music");
+    if (play) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }, [play]);
 
   return (
     <>
@@ -27,8 +37,12 @@ const Nav = () => {
             onClick={(e) => {
               e.preventDefault();
               scrollTo("home");
+              setPlay(!play);
             }}
           >
+            <audio id="background-music" loop>
+              <source src="/maple.mp3" type="audio/mp3" />
+            </audio>
             <Image alt="" width={100} height={100} src={"/logo.png"} />
           </a>
           <div className="-my-2 -mr-2 md:hidden">
