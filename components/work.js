@@ -17,7 +17,7 @@ const Work = () => {
         >
           工作經歷
         </motion.p>
-        <div className="flex w-[90%] flex-col rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 p-12 pt-0 backdrop-blur-md backdrop-filter md:w-[70%] md:flex-row md:p-12">
+        <div className="flex w-[90%] flex-col overflow-hidden rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 p-12 pt-0 backdrop-blur-md backdrop-filter md:w-[70%] md:flex-row md:p-12">
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}

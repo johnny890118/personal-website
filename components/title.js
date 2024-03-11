@@ -22,7 +22,7 @@ const Title = () => {
       className="flex h-dvh items-center justify-center"
       id="home"
     >
-      <div className="flex h-[80%] w-[90%] flex-col items-center justify-center rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 backdrop-blur-md backdrop-filter md:h-[80%] md:w-[90%] md:flex-row xl:w-[70%]">
+      <div className="flex h-[80%] w-[90%] flex-col items-center justify-center overflow-hidden rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 backdrop-blur-md backdrop-filter md:h-[80%] md:w-[90%] md:flex-row xl:w-[70%]">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
