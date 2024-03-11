@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Title = () => {
   const [contact] = useState([
@@ -10,9 +11,29 @@ const Title = () => {
   ]);
 
   return (
-    <div className="flex h-dvh items-center justify-center" id="home">
+    <motion.div
+      initial={{ y: "-100%" }}
+      animate={{ y: 0 }}
+      transition={{
+        type: "tween",
+        duration: 1.5,
+        ease: "easeInOut",
+      }}
+      className="flex h-dvh items-center justify-center"
+      id="home"
+    >
       <div className="flex h-[80%] w-[90%] flex-col items-center justify-center rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 backdrop-blur-md backdrop-filter md:h-[80%] md:w-[90%] md:flex-row xl:w-[70%]">
-        <div className="flex h-full w-full items-center justify-start pl-4 md:w-1/2 md:justify-end">
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            type: "tween",
+            duration: 1,
+            ease: "easeInOut",
+            delay: 1.5,
+          }}
+          className="flex h-full w-full items-center justify-start pl-4 md:w-1/2 md:justify-end"
+        >
           <div className="md:w-[360px]">
             <p className="my-5 w-48 border-x-4 border-pink-500 text-center text-xs font-bold text-black md:w-60 md:text-base">
               WELCOME TO MY WORLD
@@ -38,8 +59,18 @@ const Title = () => {
               ))}
             </div>
           </div>
-        </div>
-        <div className="flex h-full w-full items-start justify-center md:w-1/2 md:items-center md:justify-center">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            type: "tween",
+            duration: 1,
+            ease: "easeInOut",
+            delay: 1.5,
+          }}
+          className="flex h-full w-full items-start justify-center md:w-1/2 md:items-center md:justify-center"
+        >
           <Image
             alt=""
             src={"/me2.jpg"}
@@ -48,9 +79,9 @@ const Title = () => {
             className="w-56 rounded-[40px] shadow-xl xl:w-80"
             priority={true}
           />
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -7,8 +7,8 @@ const Work = () => {
         <p className="mb-5 border-b-4 border-cyan-400 text-center text-2xl">
           工作經歷
         </p>
-        <div className="flex w-[90%] flex-col rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 p-12 backdrop-blur-md backdrop-filter md:w-[70%] md:flex-row">
-          <div className="flex items-center justify-center pb-12 md:items-start md:pb-0 md:pr-12">
+        <div className="flex w-[90%] flex-col rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 p-12 pt-0 backdrop-blur-md backdrop-filter md:w-[70%] md:flex-row md:p-12">
+          <div className="flex items-center justify-center md:items-start md:pb-0 md:pr-12">
             <Image alt="" src={"/work.png"} width={470} height={470} />
           </div>
           <div>

@@ -80,6 +80,7 @@
 .typewriter::before {
   content: "";
   animation: typing 13.5s infinite;
+  animation-delay: 2.5s;
 }
 
 .typewriter::after {
