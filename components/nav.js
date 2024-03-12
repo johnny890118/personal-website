@@ -96,7 +96,7 @@ const Nav = () => {
               <a
                 key={index}
                 href={item.href}
-                className={`text-base font-bold text-black hover:text-gray-600 ${activeId === item.id ? "border-b-4 border-[#002fa7]" : ""}`}
+                className={`navHover text-base font-bold text-black hover:text-gray-600 ${activeId === item.id ? "before:height-[4px] before:absolute before:-bottom-1 before:w-full before:bg-[#002fa7]" : ""}`}
                 onClick={(e) => {
                   e.preventDefault();
                   scrollTo(item.id);
@@ -153,9 +153,12 @@ const Nav = () => {
                       onClick={(e) => {
                         e.preventDefault();
                         scrollTo(item.id);
+                        setOpen(false);
                       }}
                     >
-                      <span className="ml-3 text-base font-medium text-gray-900">
+                      <span
+                        className={`ml-3 text-base font-medium text-gray-900 ${activeId === item.id ? "border-b-4 border-[#002fa7]" : ""}`}
+                      >
                         {item.name}
                       </span>
                     </a>

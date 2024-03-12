@@ -6,3 +6,25 @@
     text-wrap: balance;
   }
 }
+
+.navHover {
+  position: relative;
+  display: inline-block;
+  text-decoration: none; /* 移除連結的下劃線 */
+  /* overflow: hidden; */
+}
+
+.navHover::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0; /* 初始寬度為0 */
+  height: 4px; /* 底部邊框的高度 */
+  background-color: #002fa7; /* 底部邊框的顏色 */
+  transition: width 0.3s ease; /* 平滑過渡效果 */
+}
+
+.navHover:hover::before {
+  width: 100%; /* 當懸停時，將寬度設為100% */
+}
