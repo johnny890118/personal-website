@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
+  const [activeId, setActiveId] = useState("home");
   const [navItems] = useState([
     { name: "Home", href: "#home", id: "home" },
     { name: "關於我", href: "#about", id: "about" },
@@ -10,14 +11,35 @@ const Nav = () => {
     { name: "技能", href: "#skills", id: "skills" },
     { name: "作品集", href: "#portfolio", id: "portfolio" },
   ]);
+  const [play, setPlay] = useState(false);
 
   const scrollTo = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      setActiveId(id);
     }
   };
-  const [play, setPlay] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navItems.map((item) => document.getElementById(item.id));
+      let activeId = "";
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 0 && rect.bottom >= 0) {
+          activeId = section.id;
+        }
+      });
+
+      setActiveId(activeId);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [navItems]);
 
   useEffect(() => {
     const audio = document.getElementById("background-music");
@@ -74,7 +96,7 @@ const Nav = () => {
               <a
                 key={index}
                 href={item.href}
-                className="text-base font-bold text-black hover:text-gray-600"
+                className={`text-base font-bold text-black hover:text-gray-600 ${activeId === item.id ? "border-b-4 border-[#002fa7]" : ""}`}
                 onClick={(e) => {
                   e.preventDefault();
                   scrollTo(item.id);
