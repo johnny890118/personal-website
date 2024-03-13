@@ -5,6 +5,7 @@ const PortfolioShow = ({
   portfolioName,
   portfolioURL,
   portfolioImg,
+  portfolioContent,
   order,
 }) => {
   return (
@@ -17,12 +18,18 @@ const PortfolioShow = ({
         type: "spring",
         delay: order * 0.3,
       }}
-      className="mb-5 flex w-[90%] flex-col rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 p-12 backdrop-blur-md backdrop-filter md:w-[70%] md:flex-row"
+      className="mb-5 flex w-[90%] flex-col items-center justify-center rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 p-8 backdrop-blur-md backdrop-filter md:w-[70%]"
     >
-      <div>
-        <Image alt="" src={portfolioImg} width={400} height={400} />
+      <div className="text-center text-xl">{portfolioName}</div>
+      <br />
+      <div className="flex flex-col justify-between md:flex-row">
+        <div className="mb-4 md:mb-0">
+          <Image alt="" src={portfolioImg} width={400} height={400} />
+        </div>
+        <div className="md:w-[55%]">
+          <div>{portfolioContent}</div>
+        </div>
       </div>
-      <div className="flex-grow text-center">{portfolioName}</div>
     </motion.a>
   );
 };
