@@ -25,10 +25,11 @@ const Nav = () => {
     const handleScroll = () => {
       const sections = navItems.map((item) => document.getElementById(item.id));
       let activeId = "";
+      const offset = 50; // 設置一個偏移量，當節點的上緣距離視窗頂部小於這個值時激活
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        if (rect.top <= 0 && rect.bottom >= 0) {
+        if (rect.top <= offset && rect.bottom >= 0) {
           activeId = section.id;
         }
       });
