@@ -55,3 +55,7 @@ div::-webkit-scrollbar {
 .handwriting {
   font-family: "JasonHandwriting", cursive;
 }
+
+.hight-light {
+  background-image: linear-gradient(transparent 50%, rgb(34 211 238) 50%);
+}
