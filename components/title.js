@@ -34,16 +34,19 @@ const Title = () => {
           }}
           className="flex h-full w-full items-center justify-start pl-4 md:w-1/2 md:justify-end"
         >
-          <div className="md:w-[360px]">
-            <p className="handwriting my-5 w-48 border-x-4 border-pink-500 text-center text-xs font-bold text-black md:w-60 md:text-base">
-              WELCOME TO MY WORLD
-            </p>
-            <p className="handwriting mb-5 text-2xl font-bold text-black md:text-4xl lg:text-5xl">
+          <div className="md:w-[255px] lg:w-[418px]">
+            <div className="flex items-center space-x-2">
+              <div className="h-1 w-5 bg-pink-500"></div>
+              <p className="handwriting my-5 text-xs font-bold text-black md:text-base">
+                WELCOME TO MY WORLD
+              </p>
+            </div>
+            <p className="handwriting mb-5 text-3xl font-bold text-black md:text-4xl lg:text-6xl">
               哈囉！
             </p>
-            <p className="handwriting text-2xl font-bold text-black md:text-4xl lg:text-5xl">
+            <p className="handwriting text-3xl font-bold text-black md:text-4xl lg:text-6xl">
               {"我是 "}
-              <span className="typewriter thick text-2xl font-bold text-violet-600 md:text-4xl lg:text-5xl"></span>
+              <span className="typewriter thick text-3xl font-bold text-violet-600 md:text-4xl lg:text-6xl"></span>
             </p>
             <div className="mt-5 flex space-x-5 md:mt-10">
               {contact.map((item, index) => (
