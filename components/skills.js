@@ -26,7 +26,7 @@ const Skills = () => {
             duration: 1,
             ease: "easeInOut",
           }}
-          className="handwriting mb-5 border-b-4 border-cyan-400 text-center text-3xl"
+          className="handwriting hight-light mb-5 text-center text-3xl"
         >
           技能
         </motion.p>

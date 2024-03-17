@@ -92,7 +92,7 @@ const Portfolio = () => {
             duration: 1,
             ease: "easeInOut",
           }}
-          className="handwriting mb-5 border-b-4 border-cyan-400 text-center text-3xl"
+          className="handwriting hight-light mb-5 text-center text-3xl"
         >
           作品集
         </motion.p>
@@ -106,7 +106,8 @@ const Portfolio = () => {
             order={index}
           />
         ))}
-
+      </div>
+      <div className="flex h-full w-full flex-col items-center justify-center pt-28">
         <motion.p
           initial={{ opacity: 0, y: -100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -115,7 +116,7 @@ const Portfolio = () => {
             duration: 1,
             ease: "easeInOut",
           }}
-          className="handwriting mb-5 border-b-4 border-cyan-400 pt-28 text-center text-3xl"
+          className="handwriting hight-light mb-5 text-center text-3xl"
         >
           UI組件
         </motion.p>
