@@ -26,7 +26,13 @@ const PortfolioShow = ({
       <br />
       <div className="flex flex-col items-center justify-between lg:flex-row lg:items-start">
         <div className="mb-4 lg:mb-0">
-          <Image alt="" src={portfolioImg} width={400} height={400} />
+          <Image
+            alt=""
+            src={portfolioImg}
+            width={400}
+            height={400}
+            className="rounded-xl"
+          />
         </div>
         <div className="lg:w-[55%] lg:pl-4">
           <div>{portfolioContent}</div>

@@ -20,7 +20,13 @@ const UiComponentsShow = ({
       className="mx-2 mb-5 flex h-72 w-[21rem] flex-col justify-between rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 p-8 backdrop-blur-md backdrop-filter"
     >
       <div>
-        <Image alt="" src={portfolioImg} width={500} height={500} />
+        <Image
+          alt=""
+          src={portfolioImg}
+          width={500}
+          height={500}
+          className="rounded-lg"
+        />
       </div>
       <div className="text-center">{portfolioName}</div>
     </motion.a>
