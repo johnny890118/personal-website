@@ -27,3 +27,31 @@
 .navHover:hover::before {
   width: 100%;
 }
+
+/* 更改滾動條軌道（滾動條背景） */
+div::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+  margin: 15vh;
+}
+
+/* 更改滾動條的滑塊（可拖動的部分） */
+div::-webkit-scrollbar-thumb {
+  background: #002fa7;
+  border-radius: 10px;
+}
+
+/* 滑塊hover效果 */
+/* div::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
+
+/* 設定滾動條寬度 */
+div::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.handwriting {
+  font-family: "JasonHandwriting", cursive;
+}

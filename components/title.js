@@ -35,13 +35,13 @@ const Title = () => {
           className="flex h-full w-full items-center justify-start pl-4 md:w-1/2 md:justify-end"
         >
           <div className="md:w-[360px]">
-            <p className="my-5 w-48 border-x-4 border-pink-500 text-center text-xs font-bold text-black md:w-60 md:text-base">
+            <p className="handwriting my-5 w-48 border-x-4 border-pink-500 text-center text-xs font-bold text-black md:w-60 md:text-base">
               WELCOME TO MY WORLD
             </p>
-            <p className="mb-5 text-2xl font-bold text-black md:text-4xl lg:text-5xl">
+            <p className="handwriting mb-5 text-2xl font-bold text-black md:text-4xl lg:text-5xl">
               哈囉！
             </p>
-            <p className="text-2xl font-bold text-black md:text-4xl lg:text-5xl">
+            <p className="handwriting text-2xl font-bold text-black md:text-4xl lg:text-5xl">
               {"我是 "}
               <span className="typewriter thick text-2xl font-bold text-violet-600 md:text-4xl lg:text-5xl"></span>
             </p>

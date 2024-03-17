@@ -20,13 +20,13 @@ const PortfolioShow = ({
       }}
       className="mb-5 flex w-[90%] flex-col items-center justify-center rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 p-8 backdrop-blur-md backdrop-filter md:w-[70%]"
     >
-      <div className="text-center text-xl">{portfolioName}</div>
+      <div className="handwriting text-center text-2xl">{portfolioName}</div>
       <br />
-      <div className="flex flex-col justify-between md:flex-row">
-        <div className="mb-4 md:mb-0">
+      <div className="flex flex-col items-center justify-between lg:flex-row">
+        <div className="mb-4 lg:mb-0">
           <Image alt="" src={portfolioImg} width={400} height={400} />
         </div>
-        <div className="md:w-[55%]">
+        <div className="lg:w-[55%] lg:pl-4">
           <div>{portfolioContent}</div>
         </div>
       </div>

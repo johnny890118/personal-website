@@ -92,7 +92,7 @@ const Portfolio = () => {
             duration: 1,
             ease: "easeInOut",
           }}
-          className="mb-5 border-b-4 border-cyan-400 text-center text-2xl"
+          className="handwriting mb-5 border-b-4 border-cyan-400 text-center text-3xl"
         >
           作品集
         </motion.p>
@@ -115,7 +115,7 @@ const Portfolio = () => {
             duration: 1,
             ease: "easeInOut",
           }}
-          className="mb-5 border-b-4 border-cyan-400 pt-28 text-center text-2xl"
+          className="handwriting mb-5 border-b-4 border-cyan-400 pt-28 text-center text-3xl"
         >
           UI組件
         </motion.p>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-const SkillsShow = ({ skillName, skillPercent, order }) => {
+const SkillsShow = ({ skillName, skillPercent, order, color }) => {
   return (
     <>
       <motion.div
@@ -7,18 +7,18 @@ const SkillsShow = ({ skillName, skillPercent, order }) => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
           type: "spring",
-          delay: order * 0.3,
+          delay: order * 0.15,
         }}
-        className="m-4 flex h-52 w-52 flex-col items-center justify-center rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 font-bold backdrop-blur-md backdrop-filter"
+        className="m-4 flex size-48 flex-col items-center justify-evenly rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 font-bold backdrop-blur-md backdrop-filter"
       >
         <div
-          className="radial-progress text-violet-600"
+          className={`radial-progress ${color}`}
           style={{ "--value": skillPercent }}
           role="progressbar"
         >
           {`${skillPercent}%`}
         </div>
-        <div className="m-5">{skillName}</div>
+        <div>{skillName}</div>
       </motion.div>
     </>
   );

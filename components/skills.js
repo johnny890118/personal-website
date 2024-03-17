@@ -2,19 +2,21 @@ import { motion } from "framer-motion";
 import SkillsShow from "./skillsShow";
 
 const Skills = () => {
-  const skillsCards = [
+  const frontendSkills = [
     { name: "JavaScript", percent: 80 },
     { name: "React", percent: 60 },
     { name: "Next.JS", percent: 50 },
     { name: "Tailwind", percent: 70 },
     { name: "SCSS", percent: 70 },
+  ];
+  const backendSkills = [
     { name: "Python", percent: 70 },
     { name: "C++", percent: 40 },
     { name: "Git", percent: 70 },
     { name: "MSSQL", percent: 50 },
   ];
   return (
-    <div className="h-auto pt-28 font-bold text-black" id="skills">
+    <div className="h-auto pt-[8vh] font-bold text-black xl:h-dvh" id="skills">
       <div className="flex h-full w-full flex-col items-center justify-center">
         <motion.p
           initial={{ opacity: 0, y: -100 }}
@@ -24,19 +26,39 @@ const Skills = () => {
             duration: 1,
             ease: "easeInOut",
           }}
-          className="mb-5 border-b-4 border-cyan-400 text-center text-2xl"
+          className="handwriting mb-5 border-b-4 border-cyan-400 text-center text-3xl"
         >
           技能
         </motion.p>
-        <div className="flex w-[90%] max-w-[1370px] flex-wrap items-center justify-center md:w-[90%]">
-          {skillsCards.map((items, index) => (
-            <SkillsShow
-              key={index}
-              skillName={items.name}
-              skillPercent={items.percent}
-              order={index}
-            />
-          ))}
+        <div className="flex w-[90%] flex-col items-center justify-between xl:flex-row">
+          <div className="flex flex-col items-center justify-center xl:w-[52%]">
+            <p className="handwriting text-center text-2xl">Front-End</p>
+            <div className="flex max-w-[857px] flex-wrap items-center justify-center">
+              {frontendSkills.map((items, index) => (
+                <SkillsShow
+                  key={index}
+                  skillName={items.name}
+                  skillPercent={items.percent}
+                  order={index}
+                  color={"text-violet-500"}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-center xl:w-[46%]">
+            <p className="handwriting text-center text-2xl">Back-End</p>
+            <div className="flex max-w-[514px] flex-wrap items-center justify-center">
+              {backendSkills.map((items, index) => (
+                <SkillsShow
+                  key={index}
+                  skillName={items.name}
+                  skillPercent={items.percent}
+                  order={index}
+                  color={"text-pink-500"}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
