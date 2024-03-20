@@ -4,10 +4,11 @@ import SkillsShow from "./skillsShow";
 const Skills = () => {
   const frontendSkills = [
     { name: "JavaScript", percent: 80 },
-    { name: "React", percent: 60 },
+    { name: "React", percent: 65 },
     { name: "Next.JS", percent: 50 },
     { name: "Tailwind", percent: 70 },
     { name: "SCSS", percent: 70 },
+    { name: "RWD", percent: 85 },
   ];
   const backendSkills = [
     { name: "Python", percent: 70 },
