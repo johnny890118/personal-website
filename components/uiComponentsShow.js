@@ -28,7 +28,7 @@ const UiComponentsShow = ({
           className="rounded-lg"
         />
       </div>
-      <div className="text-center">{portfolioName}</div>
+      <div className="handwriting text-center text-2xl">{portfolioName}</div>
     </motion.a>
   );
 };
