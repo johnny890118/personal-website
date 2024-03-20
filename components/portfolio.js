@@ -8,6 +8,8 @@ const Portfolio = () => {
       name: "智慧倉儲派車系統",
       url: "https://wcs-demo.vercel.app/",
       img: "/wcs.png",
+      video: "/wcsVideo.mp4",
+      type: "video",
       content: (
         <p>
           派車系統的前端開發。
@@ -24,6 +26,8 @@ const Portfolio = () => {
       name: "MuPho",
       url: "https://mu-pho.vercel.app/",
       img: "/mupho.png",
+      video: "/muphoVideo.mp4",
+      type: "video",
       content: (
         <p>
           一個人夜深人靜的時候，總是容易emo。
@@ -68,16 +72,19 @@ const Portfolio = () => {
       name: "Alert",
       url: "https://johnny890118.github.io/alert-ui.github.io/alert-ui/index.html",
       img: "/alert.png",
+      content: "網頁彈出視窗UI",
     },
     {
       name: "Toast",
       url: "https://johnny890118.github.io/toast-ui.github.io/toast-ui/index.html",
       img: "/toast.png",
+      content: "網頁彈出視窗5秒後自動消失UI",
     },
     {
-      name: "QA",
+      name: "Q&A",
       url: "https://johnny890118.github.io/collapse-ui.github.io/QA/index.html",
       img: "/QA.png",
+      content: "Q&A問答UI",
     },
   ];
 
@@ -102,8 +109,10 @@ const Portfolio = () => {
             portfolioName={items.name}
             portfolioURL={items.url}
             portfolioImg={items.img}
+            portfolioVideo={items.video}
             portfolioContent={items.content}
             order={index}
+            type={items.type}
           />
         ))}
       </div>
@@ -128,6 +137,7 @@ const Portfolio = () => {
               portfolioURL={items.url}
               portfolioImg={items.img}
               order={index}
+              portfolioContent={items.content}
             />
           ))}
         </div>

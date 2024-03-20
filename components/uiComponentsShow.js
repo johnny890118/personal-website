@@ -6,6 +6,7 @@ const UiComponentsShow = ({
   portfolioURL,
   portfolioImg,
   order,
+  portfolioContent,
 }) => {
   return (
     <motion.a
@@ -17,7 +18,7 @@ const UiComponentsShow = ({
         type: "spring",
         delay: order * 0.3,
       }}
-      className="mx-2 mb-5 flex h-72 w-[21rem] flex-col justify-between rounded-3xl border border-gray-100 bg-gray-400 bg-opacity-10 p-8 backdrop-blur-md backdrop-filter"
+      className="mx-2 mb-5 flex size-72 flex-col justify-between rounded-xl border border-gray-100 bg-gray-400 bg-opacity-10 backdrop-blur-md backdrop-filter"
     >
       <div>
         <Image
@@ -25,10 +26,11 @@ const UiComponentsShow = ({
           src={portfolioImg}
           width={500}
           height={500}
-          className="rounded-lg"
+          className="rounded-t-xl"
         />
       </div>
       <div className="handwriting text-center text-2xl">{portfolioName}</div>
+      <div className="mb-6 text-center">{portfolioContent}</div>
     </motion.a>
   );
 };

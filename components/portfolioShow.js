@@ -5,11 +5,13 @@ const PortfolioShow = ({
   portfolioName,
   portfolioURL,
   portfolioImg,
+  portfolioVideo,
   portfolioContent,
   order,
+  type,
 }) => {
   return (
-    <motion.a
+    <motion.div
       target="_blank"
       href={`${portfolioURL}`}
       initial={{ opacity: 0, y: -100 }}
@@ -26,19 +28,33 @@ const PortfolioShow = ({
       <br />
       <div className="flex flex-col items-center justify-between lg:flex-row lg:items-start">
         <div className="mb-4 lg:mb-0">
-          <Image
-            alt=""
-            src={portfolioImg}
-            width={400}
-            height={400}
-            className="rounded-xl"
-          />
+          {type === "video" ? (
+            <video
+              width="400"
+              height="400"
+              controls
+              poster={portfolioImg}
+              preload="none"
+              className="rounded-xl"
+            >
+              <source src={portfolioVideo} type="video/mp4" />
+              您的瀏覽器不支援 HTML5 影片。
+            </video>
+          ) : (
+            <Image
+              alt=""
+              src={portfolioImg}
+              width={400}
+              height={400}
+              className="rounded-xl"
+            />
+          )}
         </div>
         <div className="lg:w-[55%] lg:pl-4">
           <div>{portfolioContent}</div>
         </div>
       </div>
-    </motion.a>
+    </motion.div>
   );
 };
 
