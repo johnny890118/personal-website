@@ -8,7 +8,7 @@ const Portfolio = () => {
       name: "智慧倉儲派車系統",
       url: "https://wcs-demo.vercel.app/",
       img: "/wcs.png",
-      video: "/wcsVideo.mp4",
+      video: "https://www.youtube.com/embed/ZiHREtpPIik?si=uLGXgQaI8FqnSc-D",
       type: "video",
       content: (
         <p>
@@ -26,7 +26,7 @@ const Portfolio = () => {
       name: "MuPho",
       url: "https://mu-pho.vercel.app/",
       img: "/mupho.png",
-      video: "/muphoVideo.mp4",
+      video: "https://www.youtube.com/embed/jSKk79GH5ng?si=0P5nX-0QLNWeU-ij",
       type: "video",
       content: (
         <p>

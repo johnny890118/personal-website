@@ -27,19 +27,19 @@ const PortfolioShow = ({
       </div>
       <br />
       <div className="flex flex-col items-center justify-between lg:flex-row lg:items-start">
-        <div className="mb-4 lg:mb-0">
+        <div className="mb-4 lg:mb-0 lg:w-[30%]">
           {type === "video" ? (
-            <video
-              width="400"
-              height="400"
-              controls
-              poster={portfolioImg}
-              preload="none"
-              className="rounded-xl"
-            >
-              <source src={portfolioVideo} type="video/mp4" />
-              您的瀏覽器不支援 HTML5 影片。
-            </video>
+            <iframe
+              width="560"
+              height="315"
+              src={portfolioVideo}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              className="aspect-video h-auto w-full rounded-xl"
+            ></iframe>
           ) : (
             <Image
               alt=""
