@@ -53,7 +53,7 @@ const PortfolioShow = ({
           <div>{portfolioContent}</div>
           <div className="mt-8 flex items-center justify-center xl:justify-start">
             <a href={`${portfolioURL}`} target="_blank">
-              <button class="btn">See More</button>
+              <button class="glassbtn">See More{" >"}</button>
             </a>
           </div>
         </div>
