@@ -13,7 +13,6 @@ const PortfolioShow = ({
   return (
     <motion.div
       target="_blank"
-      href={`${portfolioURL}`}
       initial={{ opacity: 0, y: -100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
@@ -26,8 +25,8 @@ const PortfolioShow = ({
         {portfolioName}
       </div>
       <br />
-      <div className="flex flex-col items-center justify-between lg:flex-row lg:items-start">
-        <div className="mb-4 lg:mb-0 lg:w-[30%]">
+      <div className="flex w-full flex-col items-center justify-between lg:flex-row lg:items-start">
+        <div className="mb-4 w-full lg:mb-0 lg:w-[45%] xl:w-[30%]">
           {type === "video" ? (
             <iframe
               width="560"
@@ -46,12 +45,17 @@ const PortfolioShow = ({
               src={portfolioImg}
               width={400}
               height={400}
-              className="rounded-xl"
+              className="aspect-video h-auto w-full rounded-xl"
             />
           )}
         </div>
-        <div className="lg:w-[55%] lg:pl-4">
+        <div className="lg:w-[55%] lg:pl-4 xl:w-[65%]">
           <div>{portfolioContent}</div>
+          <div className="mt-8 flex items-center justify-center xl:justify-start">
+            <a href={`${portfolioURL}`} target="_blank">
+              <button class="btn">See More</button>
+            </a>
+          </div>
         </div>
       </div>
     </motion.div>

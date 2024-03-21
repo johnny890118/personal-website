@@ -41,7 +41,7 @@ const Skills = () => {
                   skillName={items.name}
                   skillPercent={items.percent}
                   order={index}
-                  color={"text-violet-500"}
+                  color={"text-violet-600"}
                 />
               ))}
             </div>
@@ -55,7 +55,7 @@ const Skills = () => {
                   skillName={items.name}
                   skillPercent={items.percent}
                   order={index}
-                  color={"text-pink-500"}
+                  color={"text-pink-600"}
                 />
               ))}
             </div>

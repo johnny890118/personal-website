@@ -59,3 +59,42 @@ div::-webkit-scrollbar {
 .hight-light {
   background-image: linear-gradient(transparent 50%, rgb(34 211 238) 50%);
 }
+
+.btn {
+  position: relative;
+  z-index: 10;
+  width: 200px;
+  height: 60px;
+  border: 1px solid rgb(243, 244, 246);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: black;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  outline: none;
+  cursor: pointer;
+}
+.btn::before {
+  position: absolute;
+  top: 15px;
+  left: 50px;
+  z-index: -1;
+  width: 100px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #7d7dff;
+  filter: blur(10px);
+  content: "";
+  opacity: 0;
+  transition: 0.5s;
+}
+.btn:hover::before {
+  transform: scale(2);
+  opacity: 1;
+}
+
+.btn:hover {
+  color: white;
+}
